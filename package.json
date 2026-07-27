@@ -1,0 +1,85 @@
+{
+  "name": "@thinhnd028/strapi-plugin-excel-export",
+  "version": "0.0.1",
+  "description": "Export Strapi 5 collections to Excel (.xlsx) with per-collection RBAC and a createdAt date-range filter",
+  "author": "thinhnd028",
+  "license": "MIT",
+  "keywords": [
+    "strapi",
+    "plugin",
+    "strapi-plugin",
+    "excel",
+    "export",
+    "xlsx",
+    "exceljs"
+  ],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "types": "./dist/admin/src/index.d.ts",
+      "source": "./admin/src/index.ts",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "types": "./dist/server/src/index.d.ts",
+      "source": "./server/src/index.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build && tsc -p tsconfig.build.json",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test:ts:front": "tsc -p admin/tsconfig.json",
+    "test:ts:back": "tsc -p server/tsconfig.json"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "devDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.30.1",
+    "@strapi/typescript-utils": "^5.30.1",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "prettier": "^3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1",
+    "styled-components": "^6.1.19",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "excel-export",
+    "displayName": "Excel Export",
+    "description": "Export Strapi 5 collections to Excel (.xlsx) with per-collection RBAC"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thinhnd028/strapi-plugin-excel-export.git"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x"
+  }
+}
