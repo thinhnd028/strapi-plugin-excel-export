@@ -1,6 +1,6 @@
 {
   "name": "@thinhnd028/strapi-plugin-excel-export",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Export Strapi 5 collections to Excel (.xlsx) with per-collection RBAC and a createdAt date-range filter",
   "author": "thinhnd028",
   "license": "MIT",
