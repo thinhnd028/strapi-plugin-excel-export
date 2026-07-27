@@ -43,6 +43,8 @@
     "test:ts:back": "tsc -p server/tsconfig.json"
   },
   "dependencies": {
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0",
     "exceljs": "^4.4.0"
   },
   "devDependencies": {
